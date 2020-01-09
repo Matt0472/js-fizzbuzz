@@ -19,14 +19,19 @@
 //   }
 // }
 
-for (var i = 1; i < 100; i++) {
+for (var i = 1; i <= 100; i++) {
+  var listaNumeri = document.getElementById('numbers').innerHTML;
   if (i % 3 == 0 && i % 5 == 0) {
     console.log('FizzBuzz');
+    document.getElementById('numbers').innerHTML += '<li>' + 'FizzBuzz' + '</li>';
   } else if (i % 3 == 0) {
     console.log('Fizz');
+    document.getElementById('numbers').innerHTML += '<li>' + 'Fizz' + '</li>';
   } else if (i % 5 == 0) {
     console.log('Buzz');
+    document.getElementById('numbers').innerHTML += '<li>' + 'Buzz' + '</li>';
   } else {
     console.log(i);
+    document.getElementById('numbers').innerHTML += '<li>' + i + '</li>';
   }
 }
